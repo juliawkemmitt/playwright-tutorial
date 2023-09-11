@@ -6,3 +6,14 @@ test('has title', async ({ page }) => {
     // Expect a title "to contain" a substring.
     await expect(page).toHaveTitle(/Google/);
   });
+
+  test('has title playwright when searched', async ({ page }) => {
+    await page.goto('https://www.google.co.nz/');
+    
+     // finds search bar that has the name q and searchs
+    await page.fill('textarea[name=q]', 'playwright');
+    await page.press('textarea[name=q]', 'Enter');
+
+    // Expect a title "to contain" a substring.
+    await expect(page).toHaveTitle(/playwright/);
+  });
