@@ -1,2 +1,3 @@
 # playwright-tutorial
-Working throught the tutorial on the playwright website https://playwright.dev/docs/writing-tests
+Looking at the guide on https://playwright.dev/docs/writing-tests
+The tests that I have written are in test.spec.ts
