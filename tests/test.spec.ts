@@ -17,3 +17,17 @@ test('has title', async ({ page }) => {
     // Expect a title "to contain" a substring.
     await expect(page).toHaveTitle(/playwright/);
   });
+
+  test('has title image', async ({ page }) => {
+    await page.goto('https://www.google.co.nz/');
+    
+      // Click the get started link.
+    await page.getByRole('link', { name: 'Image' }).click();
+
+    // Expect a title "to contain" a substring.
+    await expect(page).toHaveTitle(/Image/);
+  });
+
+
+
+ 
